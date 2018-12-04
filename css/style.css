@@ -1,0 +1,67 @@
+body {
+  color: #fff;
+  font: 14px/20px Montserrat, sans-serif;
+  padding: 0;
+  background: #1c1d2b;
+  min-height: 100vh;
+}
+
+h1 {
+  padding: 50px;
+}
+
+table tr td:first-child {
+  width: 170px;
+}
+
+#st-gauge-image {
+  padding: 30px;
+}
+
+#test-download,
+#test-upload {
+  width: 500px;
+  height: 100%;
+}
+
+#results {
+  padding-top: 20px;
+  padding-left: 140px;
+  display: none;
+  color: rgb(170, 170, 170);
+}
+
+#results > h2 > span {
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+#result-pages p {
+  padding-top: 20px;
+}
+
+#result-pages p span:first-child {
+  padding-right: 10px;
+  color: rgb(240, 240, 240);
+  font-size: 3em;
+}
+
+.modal {
+  color: rgb(20, 20, 20);
+}
+
+.modal a.close-modal {
+  top: -2.5px;
+  right: -2.5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #test-download,
+  #test-upload {
+    width: 350px;
+  }
+  #st-gauge-image {
+    margin: 0;
+    padding: 0;
+  }
+}
