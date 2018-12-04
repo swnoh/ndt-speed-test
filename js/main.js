@@ -33,7 +33,7 @@ var transitionSpeed = 400;
 // just use the current server's hostname.
 if (typeof window.ndtServer === 'undefined') {
   // Toronto Server
-  var ndtServer = 'ndt-iupui-mlab1-yyz02.measurement-lab.org';
+  var ndtServer = 'ndt-iupui-mlab1-yul02.measurement-lab.org';
 
   // Find a close ndt server
   // var ndtServer;
