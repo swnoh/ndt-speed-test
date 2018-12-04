@@ -32,23 +32,23 @@ var transitionSpeed = 400;
 // A front-end implementation could define some specific server. If not, then
 // just use the current server's hostname.
 if (typeof window.ndtServer === 'undefined') {
-  // Toronto Server
-  var ndtServer = 'ndt-iupui-mlab1-yul02.measurement-lab.org';
+  var ndtServer;
 
-  // Find a close ndt server
-  // var ndtServer;
-  // $.ajax({
-  //   url: 'https://mlab-ns.appspot.com/ndt?format=json',
-  //   type: 'GET',
-  //   dataType: 'JSON',
-  //   success: function(data) {
-  //     ndtServer = data.fqdn;
-  //   },
-  //   error: function(error) {
-  //     console.log(error);
-  //     debug('Failed to get NDT server.');
-  //   }
-  // });
+  // Find a closest ndt server
+  $.ajax({
+    url: 'https://mlab-ns.appspot.com/ndt?format=json',
+    type: 'GET',
+    dataType: 'JSON',
+    success: function(data) {
+      //Before assigning server, convert an address of fqdn.
+      preAddr = data.fqdn.split('.measurement-lab.org')[0].replace(/\./g, '-');
+      ndtServer = preAddr + '.measurement-lab.org';
+    },
+    error: function(error) {
+      console.log(error);
+      debug('Failed to get NDT server.');
+    }
+  });
 }
 
 // Gauges used for showing download/upload speed

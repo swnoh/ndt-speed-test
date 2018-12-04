@@ -63,7 +63,8 @@ NDTWrapper.prototype.run_test = function() {
   this.reset();
 
   if (this.use_web_worker) {
-    console.log('Generating new worker');
+    // console.log('Generating new worker');
+
     // 'new Worker()' only accepts absolute paths to script files, so
     // determine the path to the location of the ndt-wrapper.js script, and
     // ndt-wrapper-ww.js should be in the same place.
